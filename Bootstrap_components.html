@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=width-device initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/ff32409344.js"></script>
+<script>
+    var n=0;
+function move()
+    {
+        n=n+1;
+        if(n%2==0)
+            {
+
+            document.getElementById("bar3").style.transform='rotate('+0+'deg)';
+            document.getElementById("bar1").style.transform='rotate('+0+'deg)';
+        
+            }
+        else
+            {
+           
+            document.getElementById("bar3").style.transform='rotate('+20+'deg)';
+              document.getElementById("bar1").style.transform='rotate('+-20+'deg)';
+            }
+   }
+</script>
+<style>
+#bar1,#bar2,#bar3
+    {
+        transition: all 0.3s ease-in-out;
+    }
+
+</style>
+</head>
+<body>
+    <h1>Conatiners</h1>
+<div class="container" style="border: 2px solid black; margin-top: 10px;">
+    This is a container
+</div>
+
+
+<div class="container-fluid" style="border: 2px solid black; margin-top: 10px;">
+    This is a container-fluid
+</div>
+<h1>Grid systems</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4" style="background: red; height: 100px; ">Amit</div> 
+        <div class="col-md-4" style="background: lightgreen; height: 100px; ">Aditya</div>
+        <div class="col-md-4" style="background: lightgrey; height: 100px; " >Abhinav</div>
+    </div>
+</div>
+<h1>List</h1>
+    <div class="container">
+        
+<dl>
+<dt>Indoors</dt>
+    <dd>-Netflix</dd>
+    <dd>-Friends</dd>
+    <dd>-Cartoon</dd>
+</dl>
+    </div>
+<h1>Tables</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Amit</td>
+            <td>20</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td>Sumit</td>
+            <td>30</td>
+            <td>453</td>
+        </tr>
+        <tr>
+            <td>Akash</td>
+            <td>15</td>
+            <td>3545</td>
+        </tr>
+    </tbody>
+</table>
+    
+    <h1>Condensed Tables</h1>
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Amit</td>
+            <td>20</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td>Sumit</td>
+            <td>30</td>
+            <td>453</td>
+        </tr>
+        <tr>
+            <td>Akash</td>
+            <td>15</td>
+            <td>3545</td>
+        </tr>
+    </tbody>
+</table>
+     <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" onclick="move()" data-toggle="collapse" data-target="#main" id="cmd">
+                    <span class="icon-bar" id="bar1"></span>
+                    <span class="icon-bar" id="bar2"></span>
+                    <span class="icon-bar" id="bar3"></span>
+                </button>
+                <a class="navbar-brand" href="#">Team CSI</a>
+            </div>
+            <div class="collapse navbar-collapse" id="main">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a>HOME</a></li>
+                    <li><a>OUR PRODUCTS</a></li>
+                    <li><a>SERVICES</a></li>
+                    <li><a>DOWNLOAD</a></li>
+                    <li><a>CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+<h1>Responsive images</h1>
+<div class="container">
+    <img src="IMG_20160401_082308.jpg" class="img-responsive" width="600" height="600">
+</div>
+<h1>Video_Responsive</h1>
+    <div class="container">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cmSbXsFE3l8"></iframe>
+        </div>
+    </div>
+ <h1>Nav Bar</h1>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Team CSI</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a>HOME</a></li>
+                    <li><a>OUR PRODUCTS</a></li>
+                    <li><a>SERVICES</a></li>
+                    <li><a>DOWNLOAD</a></li>
+                    <li><a>CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1>Nav Bar Invert</h1>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Team CSI</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a>HOME</a></li>
+                    <li><a>OUR PRODUCTS</a></li>
+                    <li><a>SERVICES</a></li>
+                    <li><a>DOWNLOAD</a></li>
+                    <li><a>CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <h1>Nav Bar</h1>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Team CSI</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a>HOME</a></li>
+                    <li><a>OUR PRODUCTS</a></li>
+                    <li><a>SERVICES</a></li>
+                    <li><a>DOWNLOAD</a></li>
+                    <li><a>CONTACT US</a></li>
+                    <!--Dorpdown menu-->
+                    <li class="dropdown">
+                        
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">MY PROFILE <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a>SERVICES</a></li>
+                            <li><a>DOWNLOAD</a></li>
+                            <li><a>CONTACT US</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">LOGOUT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<h1>Push and Pull</h1> 
+<div class="row">
+    <div class="col-md-5 col-md-push-5" style="background: green;"> MAIN</div>
+    <div class="col-md-5 col-md-pull-5" style="background: yellow;"> B</div>
+    <div class="col-md-2" style="background: blue;"> C</div>
+</div>
+    
+</body>
+</html>
