@@ -13,14 +13,32 @@ $(function () {
     slider.css('margin-left', sliderMargin + "rem");
 
     $('.signUpForm').hide();
-
     login.slideUp();
+
+
     login.stop().click(function () {
 
         $('.loginForm').fadeToggle(700);
+
         $('.signUpForm').fadeToggle(700);
-        slider.css("transition", "all .3s cubic-bezier(.87,.32,.79,.6)");
-        slider.css('margin-left', sliderMargin + "rem");
+
+        $('.loginForm').animate({
+            width: "90%"
+        }, 300).animate({
+            width: "85%"
+        }, 300, function () {
+            slider.animate({
+                marginLeft: sliderMargin - 7 + "rem"
+            }, 300).animate({
+                marginLeft: sliderMargin + "rem"
+            }, 400);
+        });
+
+
+        //         $('.loginForm').find("input").animate({
+        //            padding: "3rem 1.5rem"
+        //        },300).animate({ padding: "1.5rem 1.5rem"},400);
+
         slider.css("height", "40rem");
         login.slideUp();
         signup.slideDown();
@@ -28,14 +46,30 @@ $(function () {
     signup.stop().click(function () {
         $('.loginForm').fadeToggle(700);
         $('.signUpForm').fadeToggle(700);
-        slider.css("transition", "all .5s cubic-bezier(.87,.32,.79,.6)");
-        slider.css('margin-left', sliderMargin * 3 + "rem");
+        $('.signUpForm').animate({
+            width: "90%"
+        }, 300).animate({
+            width: "85%"
+        }, 300, function(){
+            
+        slider.animate({
+            marginLeft: sliderMargin * 3 + 7 + "rem"
+        }, 300).animate({
+            marginLeft: sliderMargin * 3 + "rem"
+        }, 400);
+        });
         signup.slideUp()
         login.slideDown();
         slider.css("height", "45rem");
-        $("input").css('margin','2.5rem 0');
+        $("input").css('margin', '2.5rem 0');
     });
 
+    
+    
+    
+    
+    
+    
 
     //Validation
 
