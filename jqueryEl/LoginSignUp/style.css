@@ -16,8 +16,9 @@ font-family: 'Montserrat', sans-serif;
 
 body {
     background-image: url(background.png);
-    background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     overflow: hidden;
 }
 
@@ -103,7 +104,9 @@ form {
     text-align: center;
     text-transform: uppercase;
 }
-
+.signUpForm,.loginForm{
+    overflow: hidden;
+}
 input[type=text],
 input[type=password],
 input[type=email] {
@@ -115,12 +118,17 @@ input[type=email] {
     margin: 3rem 0;
     font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
+    transition: all .5s ease-in-out;
 }
 
 input:focus {
     outline: none;
 }
-
+.details{
+color: #d4053d;
+    margin-top: -2rem;
+    
+}
 .sub {
     background: #220322;
     border: none;
@@ -128,7 +136,7 @@ input:focus {
     padding: 1rem 3rem;
     font-size: 2rem;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 3rem;
     transition: all .3s;
 }
 
