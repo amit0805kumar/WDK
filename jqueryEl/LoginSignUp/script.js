@@ -21,7 +21,7 @@ $(function () {
         $('.signUpForm').fadeToggle(700);
         slider.css("transition", "all .3s cubic-bezier(.87,.32,.79,.6)");
         slider.css('margin-left', sliderMargin + "rem");
- slider.css("height","40rem");
+        slider.css("height", "40rem");
         login.slideUp();
         signup.slideDown();
     });
@@ -32,7 +32,8 @@ $(function () {
         slider.css('margin-left', sliderMargin * 3 + "rem");
         signup.slideUp()
         login.slideDown();
-        slider.css("height","45rem");
+        slider.css("height", "45rem");
+        $("input").css('margin','2.5rem 0');
     });
 
 
@@ -42,7 +43,7 @@ $(function () {
     var lpassword = $("#lpassword");
     var susername = $("#suserName");
     var spassword = $("#spassword");
-    var email = $("#email");
+    var sEmail = $("#email");
 
     $('input:text,input:password').focus(function () {
 
@@ -83,7 +84,7 @@ $(function () {
         if (flagLUserName == -1) {
             $(".lUserNameDetail").text("Username Incorrect");
         } else {
-            
+
             $("lUserNameDetail").empty();
         }
         if (flagLPassword == -1) {
@@ -91,8 +92,8 @@ $(function () {
         } else {
             $(".lPasswordDetail").empty();
         }
-        
-        
+
+
         if (flagLUserName == -1 || flagLPassword == -1) {
             event.preventDefault();
         } else {
@@ -100,9 +101,76 @@ $(function () {
         }
 
     });
-    
-    
-    
-    
+
+    susername.keyup(function () {
+        var value = susername.val();
+        if (value.length > 3) {
+            flagSUserName = 1;
+            susername.css("border-bottom", "1.5px solid #00e51a");
+        } else {
+            flagSUserName = -1;
+            susername.css("border-bottom", "1.5px solid #ad0000");
+        }
+
+    });
+
+    var upperCase = new RegExp('[A-Z]');
+    var lowerCase = new RegExp('[a-z]');
+    var numbers = new RegExp('[0-9]');
+    var emailRegex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    spassword.keyup(function () {
+        var value = spassword.val();
+        if (value.length > 3 && value.match(numbers) && value.match(upperCase) && value.match(lowerCase)) {
+            flagSPassword = 1;
+            spassword.css("border-bottom", "1.5px solid #00e51a");
+        } else {
+            flagSPassword = -1;
+            spassword.css("border-bottom", "1.5px solid #ad0000");
+        }
+
+    });
+
+
+    sEmail.keyup(function () {
+        var value = sEmail.val();
+        if (emailRegex.test(value)) {
+            flagSEmail = 1;
+            sEmail.css("border-bottom", "1.5px solid #00e51a");
+        } else {
+            flagSEmail = -1;
+            sEmail.css("border-bottom", "1.5px solid #ad0000");
+        }
+
+    });
+
+
+
+    $(".signUpForm").submit(function (event) {
+        if (flagSUserName == -1) {
+            $(".sUserNameDetails").text("User name is not valid!");
+        } else {
+            $(".sUserNameDetails").empty();
+        }
+
+        if (flagSPassword == -1) {
+            $(".sPasswordDetails").text("Password must contain a number, a capital letter and length must be greater than 3");
+        } else {
+            $(".sPasswordDetails").empty();
+        }
+        if (flagSEmail == -1) {
+            $(".sEmailDetails").text("Email is not valid!");
+        } else {
+            $(".sEmailDetails").empty();
+        }
+        if (flagSEmail == -1 || flagSPassword == -1 || flagSUserName == -1) {
+            event.preventDefault();
+        } else {
+            //formSubmitted
+        }
+
+    });
+
+
 
 });
