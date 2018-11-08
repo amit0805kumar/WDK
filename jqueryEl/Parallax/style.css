@@ -3,10 +3,12 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
 body {
     background: #021e43;
     height: 2000px;
 }
+
 html {
     font-size: 62.5%;
 }
@@ -16,8 +18,6 @@ font-family: 'Source Sans Pro', sans-serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'Montserrat', sans-serif;
 */
-
-
 
 #main {
     width: 92%;
@@ -58,12 +58,124 @@ font-family: 'Montserrat', sans-serif;
     left: 50%;
     transform: translateX(-50%);
     z-index: 999;
-    box-shadow: 0 0 0 8px rgba(140,237,243,.2), 0 0 0 16px rgba(140,237,243,.3);
+    box-shadow: 0 0 0 8px rgba(140, 237, 243, .2), 0 0 0 16px rgba(140, 237, 243, .3);
 }
 
-#btn img{
+#btn img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+}
+
+.pattern {
+    width: 70%;
+    height: 700px;
+    background-image: url(static-lines-png-1.png);
+    background-size: cover;
+    position: absolute;
+    left: 30%;
+
+    top: 750px;
+}
+
+#playlist {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: rotate(-20deg) translate(-50%, -50%);
+}
+
+.playlistGallery {
+    width: 90%;
+
+    margin-top: 900px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 250px 0;
+}
+
+.playImg {
+    width: 400px;
+    height: 220px;
+}
+
+.playImg:hover {
+    cursor: pointer;
+}
+
+.img1 {
+    background-image: url("1.jpg");
+    background-size: cover;
+}
+
+.img2 {
+    background-image: url();
+    background-size: cover;
+}
+
+.img3 {
+    background-image: url("2.jpg");
+    background-size: cover;
+}
+
+.img4 {
+    background-image: url("4.jpg");
+    background-size: cover;
+}
+
+.hover-in {
+    transition: .3s ease-out;
+}
+
+.hover-out {
+    transition: .3s ease-in;
+}
+
+.fade {
+    animation: fadeAnimation;
+}
+.fadep {
+    animation: fadeAnimationp;
+}
+
+@keyframes fadeAnimation {
+
+    0% {
+        opacity: 0;
+        transform: scale(.8);
+    }
+  
+     100%{
+        opacity: 1;
+         transform: scale(1);
+    }
+}
+@keyframes fadeAnimationp {
+
+    0% {
+        opacity: 0;
+    }
+  
+     100%{
+        opacity: 1;
+    }
+}
+.container{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.b{
+    width: 300px;
+    height: 300px;
+    background: cyan;
 }

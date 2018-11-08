@@ -8,23 +8,65 @@
     <!--    <link rel="shotcut icon" type="img/png" href="Images/icon.png">-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800|Poppins:300,400,500,600,700,900|Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
+    
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="jquery.hover3d.js"></script>
+    <script src="wow.min.js"></script>
+    <link rel="stylesheet" href="animate.css">
     <title>Parallax Effect</title>
 </head>
 
 <body>
-<div id="main">
-    <div id="logo">
-       <img src="logo.png" alt="" id="logoImg">
+   <div id="main">
+        <div id="logo">
+            <img src="logo.png" alt="" id="logoImg">
+        </div>
+        <div id="mountainImg"><img src="background.png" width="100%" alt=""></div>
     </div>
-    <div id="mountainImg"><img src="background.png" width="100%" alt=""></div>
-</div>
 
-<div id="btn">
-        <img src="playImg.png" width="50px" alt=""> 
-</div>
+    <div id="btn">
+        <img src="playImg.png" width="50px" alt="">
+    </div>
+
+
+    <div class="pattern rellax">
+        <img class="fadep wow" src="playlist.png" width="400px" alt="" id="playlist">
+    </div>
+
+    <div class="playlistGallery">
+        <div class="row" style="justify-content: flex-start;">
+            <div class="project">
+                <div class="project__card">
+                    <div class="playImg img1 fade wow"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="project">
+                <div class="project__card">
+                    <div class="playImg img3 fade wow" ></div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project__card">
+                    <div class="playImg img4 fade wow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!--    <div class="container">
+        <div class="b rellax">This</div>
+        <div class="b rellax">This</div>
+    </div>
+     <div class="container">
+        <div class="b rellax">This</div>
+        <div class="b rellax">This</div>
+    </div>-->
+    <script src="rellax.js"></script>
+
 
 </body>
 
